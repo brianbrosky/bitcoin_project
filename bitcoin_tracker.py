@@ -13,9 +13,9 @@ import json
 from pprint import pprint
 
 
-API_KEY_COINMARKET = environ['IFTTT_KEY']
+API_KEY_COINMARKET = environ['API_KEY_COINMARKET']
 print(API_KEY_COINMARKET)
-
+#%%
 url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest'
 parameters = {
     'slug':'bitcoin',
@@ -28,7 +28,7 @@ headers = {
 
 session = Session()
 session.headers.update(headers)
-
+#%%
 try:
   response = session.get(url, params=parameters)
   data = json.loads(response.text)

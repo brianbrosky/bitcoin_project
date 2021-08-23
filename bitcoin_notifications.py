@@ -2,7 +2,7 @@
 """
 Created on Fri Aug 20 18:27:50 2021
 
-@author: facts
+@author: @brianbrosky
 """
 
 import requests
@@ -63,7 +63,8 @@ def format_bitcoin_history(bitcoin_history):
 API_KEY_COINMARKET = environ['API_KEY_COINMARKET']
     
 BITCOIN_API_URL = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest'
-IFTTT_WEBHOOKS_URL = 'https://maker.ifttt.com/trigger/{}/with/key/'+API_KEY_COINMARKET
+IFTT_KEY = environ['IFTTT_KEY']
+IFTTT_WEBHOOKS_URL = 'https://maker.ifttt.com/trigger/{}/with/key/'+IFTT_KEY
 
 
 parameters = {
